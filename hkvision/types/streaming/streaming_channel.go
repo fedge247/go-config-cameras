@@ -50,36 +50,37 @@ type Transport struct {
 		CertificateType string `xml:"certificateType,omitempty" json:"certificateType,omitempty"`
 	} `xml:"Security,omitempty" json:"Security,omitempty"`
 }
-
+type SVC struct {
+	Enabled bool   `xml:"enabled" json:"enabled"`
+	SVCMode string `xml:"SVCMode,omitempty" json:"SVCMode,omitempty"`
+}
 type Video struct {
-	Enabled                 bool   `xml:"enabled" json:"enabled"`
-	VideoInputChannelID     string `xml:"videoInputChannelID" json:"videoInputChannelID"`
-	VideoCodecType          string `xml:"videoCodecType" json:"videoCodecType"`
-	VideoScanType           string `xml:"videoScanType,omitempty" json:"videoScanType,omitempty"`
-	VideoResolutionWidth    int    `xml:"videoResolutionWidth" json:"videoResolutionWidth"`
-	VideoResolutionHeight   int    `xml:"videoResolutionHeight" json:"videoResolutionHeight"`
-	VideoPositionX          int    `xml:"videoPositionX,omitempty" json:"videoPositionX,omitempty"`
-	VideoPositionY          int    `xml:"videoPositionY,omitempty" json:"videoPositionY,omitempty"`
-	VideoQualityControlType string `xml:"videoQualityControlType,omitempty" json:"videoQualityControlType,omitempty"`
-	ConstantBitRate         int    `xml:"constantBitRate" json:"constantBitRate"`
-	FixedQuality            *int    `xml:"fixedQuality,omitempty" json:"fixedQuality,omitempty"`
-	VbrUpperCap             int    `xml:"vbrUpperCap,omitempty" json:"vbrUpperCap,omitempty"`
-	VbrLowerCap             int    `xml:"vbrLowerCap,omitempty" json:"vbrLowerCap,omitempty"`
-	MaxFrameRate            int    `xml:"maxFrameRate" json:"maxFrameRate"`
-	KeyFrameInterval        int    `xml:"keyFrameInterval,omitempty" json:"keyFrameInterval,omitempty"`
-	RotationDegree          int    `xml:"rotationDegree,omitempty" json:"rotationDegree,omitempty"`
-	MirrorEnabled           *bool   `xml:"mirrorEnabled,omitempty" json:"mirrorEnabled,omitempty"`
-	SnapShotImageType       string `xml:"snapShotImageType,omitempty" json:"snapShotImageType,omitempty"`
-	Mpeg4Profile            string `xml:"Mpeg4Profile,omitempty" json:"Mpeg4Profile,omitempty"`
-	H264Profile             string `xml:"H264Profile,omitempty" json:"H264Profile,omitempty"`
-	GovLength               int    `xml:"GovLength,omitempty" json:"GovLength,omitempty"`
-	SVC                     *struct {
-		Enabled bool `xml:"enabled" json:"enabled"`
-	} `xml:"SVC,omitempty" json:"SVC,omitempty"`
-	PacketType  []string `xml:"PacketType,omitempty" json:"PacketType,omitempty"`
-	Smoothing   *int     `xml:"smoothing,omitempty" json:"smoothing,omitempty"`
-	H265Profile string   `xml:"H265Profile,omitempty" json:"H265Profile,omitempty"`
-	SmartCodec  *struct {
+	Enabled                 bool     `xml:"enabled" json:"enabled"`
+	VideoInputChannelID     string   `xml:"videoInputChannelID" json:"videoInputChannelID"`
+	VideoCodecType          string   `xml:"videoCodecType" json:"videoCodecType"`
+	VideoScanType           string   `xml:"videoScanType,omitempty" json:"videoScanType,omitempty"`
+	VideoResolutionWidth    int      `xml:"videoResolutionWidth" json:"videoResolutionWidth"`
+	VideoResolutionHeight   int      `xml:"videoResolutionHeight" json:"videoResolutionHeight"`
+	VideoPositionX          int      `xml:"videoPositionX,omitempty" json:"videoPositionX,omitempty"`
+	VideoPositionY          int      `xml:"videoPositionY,omitempty" json:"videoPositionY,omitempty"`
+	VideoQualityControlType string   `xml:"videoQualityControlType,omitempty" json:"videoQualityControlType,omitempty"`
+	ConstantBitRate         int      `xml:"constantBitRate" json:"constantBitRate"`
+	FixedQuality            *int     `xml:"fixedQuality,omitempty" json:"fixedQuality,omitempty"`
+	VbrUpperCap             int      `xml:"vbrUpperCap,omitempty" json:"vbrUpperCap,omitempty"`
+	VbrLowerCap             int      `xml:"vbrLowerCap,omitempty" json:"vbrLowerCap,omitempty"`
+	MaxFrameRate            int      `xml:"maxFrameRate" json:"maxFrameRate"`
+	KeyFrameInterval        int      `xml:"keyFrameInterval,omitempty" json:"keyFrameInterval,omitempty"`
+	RotationDegree          int      `xml:"rotationDegree,omitempty" json:"rotationDegree,omitempty"`
+	MirrorEnabled           *bool    `xml:"mirrorEnabled,omitempty" json:"mirrorEnabled,omitempty"`
+	SnapShotImageType       string   `xml:"snapShotImageType,omitempty" json:"snapShotImageType,omitempty"`
+	Mpeg4Profile            string   `xml:"Mpeg4Profile,omitempty" json:"Mpeg4Profile,omitempty"`
+	H264Profile             string   `xml:"H264Profile,omitempty" json:"H264Profile,omitempty"`
+	GovLength               int      `xml:"GovLength,omitempty" json:"GovLength,omitempty"`
+	SVC                     *SVC     `xml:"SVC,omitempty" json:"SVC,omitempty"`
+	PacketType              []string `xml:"PacketType,omitempty" json:"PacketType,omitempty"`
+	Smoothing               *int     `xml:"smoothing,omitempty" json:"smoothing,omitempty"`
+	H265Profile             string   `xml:"H265Profile,omitempty" json:"H265Profile,omitempty"`
+	SmartCodec              *struct {
 		Enabled bool `xml:"enabled" json:"enabled"`
 	} `xml:"SmartCodec,omitempty" json:"SmartCodec,omitempty"`
 	VbrAverageCap *int `xml:"vbrAverageCap,omitempty" json:"vbrAverageCap,omitempty"`
